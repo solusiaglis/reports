@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_add_line_number" name="report_sale_line_number"  inherit_id="sale.report_saleorder_document">
+        <xpath expr="//table[hasclass('table', 'table-sm', 'o_main_table')]/thead/tr/th[1]" position='before'>
+             <th><strong>No</strong></th>
+        </xpath>
+
+        <xpath expr="//td[@name='td_name']" position='before'>
+            <td>
+                <span t-esc="line_index+1"/>
+            </td>
+        </xpath>
+    </template>
+
+    
+</odoo>
