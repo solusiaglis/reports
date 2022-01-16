@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="report_delivery_document_add_line_number" name="report_delivery_line_number"  inherit_id="stock.report_delivery_document">
-        <xpath expr="//table[hasclass('table', 'table-sm', 'mt48')]/thead/tr/th[1]" position='before'>
+        <xpath expr="//table[2]/thead/tr/th[1]" position='before'>
              <th><strong>No</strong></th>
         </xpath>
 
-        <xpath expr="//table[hasclass('table', 'table-sm', 'mt48')]/tbody/tr/td[1]" position='before'>
+        <xpath expr="//table[2]/tbody/tr/td[1]" position='before'>
             <td>    
                 <span t-esc="move_index+1"/>
             </td>
         </xpath>
+
+        <xpath expr="//table[3]/thead/tr/th[1]" position='before'>
+             <th><strong>No</strong></th>
+        </xpath>
+
+        <xpath expr="//table[3]/tbody/tr/td[1]" position='before'>
+            <td>    
+                <span t-esc="move_line_index+1"/>
+            </td>
+        </xpath>
+
+
+
+
     </template>
 
     
